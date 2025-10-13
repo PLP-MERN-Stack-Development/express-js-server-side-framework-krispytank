@@ -24,9 +24,9 @@ npm start
 
 ### Products
 
-. GET /api/products - list all products
-. GET /api/products/:id - get specific products
-. POST /api/products - create new products
-. PUT /api/products/:id - update product
-. DELETE /api/products/:id - delete product
+1. GET /api/products - list all products
+2. GET /api/products/:id - get specific products
+3. POST /api/products - create new products
+4. PUT /api/products/:id - update product
+5. DELETE /api/products/:id - delete product
 
