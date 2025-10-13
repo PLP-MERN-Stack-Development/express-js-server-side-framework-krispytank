@@ -40,7 +40,9 @@ let products = [
   }
 ];
 
-// Root route
+// Routes
+
+// Root route/endpoint
 app.get('/', (req, res) => {
   res.send('Welcome to the Product API! Go to /api/products to see all products.');
 });
@@ -51,7 +53,6 @@ app.get('/', (req, res) => {
 app.get('/api/products', (req, res) => {
   res.json(products);
 });
-
 // GET /api/products/:id - Get a specific product
 
 app.get('/api/products/:id', (req, res) =>{
@@ -124,9 +125,11 @@ const authenticate = (req, res, next) => {
   if (!token) {
     return res.status(401).json({ message: "Unauthorized" });
   }
-  // TODO: Verify token
   next();
 };
+app.use(authenticate);
+
+// TODO: Verify token
 
 // - Error handling
 app.use((err, req, res, next) => {
