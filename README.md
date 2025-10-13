@@ -14,7 +14,7 @@ A RESTful API for managing products built with Express.js.
 
 npm start
 
-## API Documentation
+# API Documentation
 
 ## Endpoints
 
