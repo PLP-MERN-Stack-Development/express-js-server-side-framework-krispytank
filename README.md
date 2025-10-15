@@ -7,12 +7,15 @@ A RESTful API for managing products built with Express.js.
 
 1. Clone the repository
 2. Install dependencies
-   ```bash
+
+```bash
    npm install
 
 # start server
+This will Run the server.js file
 
-npm start
+```bash 
+npm run devStart
 
 # API Documentation
 
@@ -20,7 +23,7 @@ npm start
 
 ### Public Routes
 
-. GET / - Welcome to the Product API! Go to /api/products to see all products.
+1.  GET / - Welcome to the Product API! Go to /api/products to see all products.
 
 ### Products
 
