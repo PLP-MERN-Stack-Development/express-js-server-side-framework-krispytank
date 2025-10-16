@@ -6,8 +6,7 @@ const dotenv = require('dotenv');
 const bodyParser = require('body-parser');
 const { v4: uuidv4 } = require('uuid');
 const connectDB = require('./config/db');
-const Log = require('./models/log')
-
+const productsRouter = require('./routes/products');
 // Initialize Express app
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -49,10 +48,9 @@ let products = [
   }
 ];
 
-// Routes
-app.use('/products', require("./routes/productRoutes"));
-
-// Root route/endpoint
+// use product routes
+app.use('/products', productsRouter);
+// Root route
 app.get('/', (req, res) => {
   res.send('Welcome to the Product API! Go to /api/products to see all products.');
 });
